@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Wordle</title>
+    <link rel="stylesheet" href="game.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet"/>
+    <script 
+    src="https://code.jquery.com/jquery-3.6.0.min.js">
+    </script>
+    <script 
+    src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js">
+    </script>
+</head>
+
+<body>
+
+    <!-- References: 
+    https://github.com/ozboware/wordled
+    
+    https://www.freecodecamp.org/news/build-a-wordle-clone-in-javascript/
+    -->
+
+    <div id="headerContainer">
+        <h1>Findle!</h1>
+        <p>The hardest financial words guessing game in the world!</p>
+    </div>
+
+    <button onclick="startGame()">Pick a new word here!</button>
+
+    <div id="gameContainer" style="display: none;">
+        <div id="textboxContainer">
+            <input type="text" id="guessInput" placeholder="Enter your guess here..." autofocus>
+            <button onclick="placeWord()">Guess</button>
+        </div>
+
+        <div id="letterBoxes"></div>
+        <p>Attempts: <span id="attemptCounter">0</span></p>
+    </div>
+    
+    <p id="colorDescription">
+        Colour Guide:<br>
+        <strong>Green</strong>: Correct letter in the correct position.<br>
+        <strong>Yellow</strong>: Correct letter but in the wrong position.<br>
+        <strong>Red</strong>: Incorrect letter.
+    </p>
+    <script src="game.js"></script>
+</body>
+</html>

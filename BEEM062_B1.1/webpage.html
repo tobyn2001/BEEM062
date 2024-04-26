@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BSV Wallet Generator</title>
+
+    <link rel="stylesheet" type="text/css" href="webpage.css">
+
+    <script 
+      type="text/javascript" 
+      src="https://unpkg.com/bsv@1.5.3/bsv.min.js">
+    </script>
+
+    <script    
+      type="text/javascript" 
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js">
+    </script>
+
+    <script
+      src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js">
+    </script>
+
+    <script 
+      src="https://code.jquery.com/jquery-3.6.4.min.js">
+    </script>
+
+    <script 
+    src="https://cdnjs.cloudflare.com/ajax/libs/bip39/3.0.5/bip39.min.js">
+    </script>
+
+    <script 
+    src="https://unpkg.com/bsv@1.5.3/bsv-mnemonic.min.js">
+    </script>
+
+  </head>
+
+  <body>
+
+    <div id="WebName">
+      <h1>BSV Wallet Generator</h1>
+    </div>
+
+    <div id="KeyAddress">
+      <p id="publicKeyDes">Your public key is: <span id="publicKey"></span></p> 
+      <p id="addressDes">Your address is:<span id="address"></span></p>  
+      <p id="balanceDes">Your balance is:<span id="balance"></span></p>
+      <p id="mnemonicDes">Mnemonic: <span id="mnemonic"></span></p>
+      <button id="generateButton">Generate Your Digital Wallet here!</button>
+    </div>
+
+    <div id="qrcode"></div>   
+
+    <div id="cryptoInfo">
+      <p>Live Bitcoin Price:</p>
+        <p id="price">Loading...</p>
+    </div>
+
+    <script src="webpage.js"></script>  
+  </body>
+</html>
